@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-color: rgb(202, 202, 202);
+    }
+    form fieldset{     
+      width: 50%;
+      border: 1px solid black;
+    }
+    div{
+      margin-top: 10px;
+    }
+    button{
+      background-color: rgb(202, 202, 202);
+    }
+  </style>
+</head>
+<body>
+  
+  <form action="/contact" method="POST">
+    <fieldset>
+      <legend>Persoonlijke gegevens</legend>
+      <div>
+        <label for="achternaam">Acternaam:</label>
+        <input type="text" name="achternaam" id="achternaam" placeholder="achternaam">
+      </div>
+      <div>
+        <label for="voornaam">Voornaam:</label>
+        <input type="text" name="voornaam" id="voornaam" placeholder="voornaam">
+      </div>
+      <div>
+        <label for="geboorte">
+          Geboortedatum:
+        </label>
+        <input type="text" id="geboorte" placeholder="mm/dd/yyyy">
+      </div>
+      <div>
+        <label for="man">M:</label>
+        <input type="radio" name="man" id="man">
+        <label for="vrouw">V:</label>
+        <input type="radio" name="vrouw" id="vrouw">
+      </div>
+      <div>
+        <label for="postcode">Postcode:</label>
+        <input type="text" name="postcode" id="postcode" placeholder="postcode">
+      </div>
+      <div>
+        <label for="adres">Postcode:</label>
+        <input type="text" name="adres" id="adres" placeholder="adres">
+      </div>
+    </fieldset>
+    <div>
+      <button>Submit</button>
+      <button>Reset</button>
+    </div>
+    <label for="keuzes">Selecteer uw keuze:</label>
+    <select name="pets" id="keuzes">
+      <option value="">--Please choose an option--</option>
+      <option value="dog">Dog</option>
+      <option value="cat">Cat</option>
+      <option value="hamster">Hamster</option>
+      <option value="parrot">Parrot</option>
+      <option value="spider">Spider</option>
+      <option value="goldfish">Goldfish</option>
+     </select>
+    
+  </form>
+  <table>
+    <tr>
+      <th>Voornaam</th>
+      <th>Achternaam</th>
+      <th>Leeftijd</th>
+      <th>Telefoonnr</th>
+    </tr>
+    <tr>
+      <td>John</td>
+      <td>Doe</td>
+      <td>41</td>
+      <td>+316281398</td>
+    </tr>
+    <tr>
+      <td>Steven</td>
+      <td>Doe</td>
+      <td>32</td>
+      <td>+316281398</td>
+    </tr>
+    <tr>
+      <td>Alexander</td>
+      <td>Doe</td>
+      <td>16</td>
+      <td>+316281398</td>
+    </tr>
+
+  </table>
+  <br>
+  <table>
+    <tr>
+      <th>MA</th>
+      <th>DI</th>
+      <th>WO</th>
+      <th>DO</th>
+      <th>VR</th>
+    </tr>
+    <tr>
+      <td>Afspraak maken tandarts</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Sporten</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Huiswerk maken</td>
+      <td>Werken</td>
+      <td>Werken</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Afspraak met tandarts</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Werken bij vrienden</td>
+    </tr>
+  </table>
+  <br>
+  <table>
+    <tr>
+      <th><td rowspan="2"></td></th>
+      <th>Sport</th>
+      <th>Aantal recreanten</th>
+      <th>Aanta competitie spelers</th>
+      <th>Totale deelnemers</th>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Badminton</td>
+      <td>10</td>
+      <td>30</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td colspan="2">Racket sport</td>
+      <td>tafeltennis</td>
+      <td>59</td>
+      <td>30</td>
+      <td>89</td>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td>Tennis</td>
+      <td>159</td>
+      <td>130</td>
+      <td>189</td>
+    </tr>
+    <tr>
+      <td colspan="2">Tennis 159</td>
+      <td>130</td>
+      <td>189</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td>Voetbal</td>
+      <td>88</td>
+      <td>40</td>
+      <td>128</td>
+    </tr>
+    <tr>
+      <td colspan="2">Ball sport</td>
+      <td>Basketbal</td>
+      <td>60</td>
+      <td>40</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td>Volleybal</td>
+      <td>35</td>
+      <td>20</td>
+      <td>55</td>
+    </tr>
+  </table>
+
+
+</body>
+</html>

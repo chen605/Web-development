@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>Reserveringsformulier</h1>
+  <form action="/contact" method="POST">
+      <fieldset>
+        <legend>Persoonlijke gegevens</legend>
+        <div>
+          <label for="achternaam">Acternaam:</label>
+          <input type="text" name="achternaam" id="achternaam" placeholder="achternaam">
+        </div>
+        <div>
+          <label for="voornaam">Voornaam:</label>
+          <input type="text" name="voornaam" id="voornaam" placeholder="voornaam">
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" placeholder="email">
+        </div>
+        <label for="keuzes">Selecteer uw keuze:</label>
+        <select name="pets" id="keuzes">
+          <option value="">--Please choose an option--</option>
+          <option value=tafeltennis>tafeltennis</option>
+          <option value="badminton">badminton</option>
+          <option value="squash">Squash</option>
+        </select>
+        <div>
+          <label for="reservatie">Reserveren: </label>
+          <input type="date" name="reservatie" id="reservatie">
+          <input type="time" name="reservatie" id="reservatie">
+        </div>
+        <div>
+          <button>Submit</button>
+        </div>
+      </fieldset>
+  </form>
+</body>
+</html>
