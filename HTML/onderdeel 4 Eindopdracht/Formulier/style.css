@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 30%;
+  height: 120px;
+  background-image: url(./imgs/Code.jpg);
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+  margin-left: 150px;
+}
+
+section {
+  text-align: center;
+}
+
+i {
+  margin: 0 0 80px 80px;
+}
+
+img {
+  width: 500px;
+  height: 300px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 60%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
