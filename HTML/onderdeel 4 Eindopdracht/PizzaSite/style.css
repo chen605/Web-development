@@ -1,0 +1,61 @@
+body {
+  font-family: Helvetica;
+  background-color: rgb(228, 224, 224);
+}
+
+h1 {
+  font-size: 48px;
+  color: red;
+}
+.header {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+.row-one {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 2px;
+}
+.row-two {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 2px;
+}
+
+.item img {
+  width: 200px;
+  height: 200px;
+  margin-top: 5%;
+  margin-left: 5%;
+}
+
+.item {
+  display: flex;
+  background-color: white;
+  margin: 1%;
+  width: 32%;
+  height: 250px;
+}
+
+.ingredienten {
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+.styling {
+  font-style: italic;
+}
+
+.price {
+  color: red;
+  font-weight: bold;
+}
+
+button {
+  border: none;
+  padding: 12px 12px;
+}

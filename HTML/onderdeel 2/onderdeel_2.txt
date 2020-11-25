@@ -1,0 +1,26 @@
+1.	Bij het inladen van een bestand is het noodzakelijk om de locatie van het
+bestand aan te geven. Dit kan op 2 manieren:
+● Absolute path : Het beschrijft het volledige adres (URL) om toegang te krijgen tot een internetbestand.
+● Relative path: Het beschrijft het pad van het bestand ten opzichte van de locatie van het huidige webpagina-bestand.
+2.	Zoek uit welke formaat afbeeldingen er nog meer kan zijn.
+PNG, SVG WebP en GIF. 
+3.	Zoek uit welke browsers er zijn en maak een lijst van je antwoord.
+-	Chrome
+-	Edge
+-	Firefox
+-	Internet Explorer
+-	Opera
+-	Safari
+4.	In Visual studio
+
+5.	Wat houdt de alt attribute in? En waarom is het handig om de alt attribuut te
+gebruiken?
+Het alt-attribuut bevat een tekstbeschrijving van de afbeelding, die niet verplicht is, maar ongelooflijk handig is voor de toegankelijkheid - schermlezers lezen deze beschrijving voor aan hun gebruikers, zodat ze weten wat de afbeelding betekent.
+6.	Visual studio opdracht
+7.	Speel een audio bestand af met <source> tag. Leg uit wat hier het voordeel van is.
+Met de tag <source> kunt u alternatieve video- / audio- / afbeeldingsbestanden specificeren waaruit de browser kan kiezen, op basis van browserondersteuning of viewport-breedte.
+8.	Visual Studio opdracht
+9.	Visual Studio opdracht
+10.	Visual Studio opdracht
+11.	Visual Studio opdracht
+

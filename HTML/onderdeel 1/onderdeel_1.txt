@@ -1,0 +1,106 @@
+1.	Wat is het verschil tussen het internet en het world wide web? 
+Het internet is groter. Het is eigenlijk een netwerk van netwerken dat miljoenen computers over de hele wereld met elkaar verbindt.
+Het World Wide Web gebruikt Hypertext Transfer Protocol (HTTP) - een taal die wordt gebruikt om gegevens te verzenden - om toegang te krijgen tot informatie die op verschillende netwerken leeft.
+
+2.	Wat is het verschil tussen HTML, CSS en JavaScript?
+HTML (Hyper Text Markup Language) is de standaard ‘opmaaktaal’ voor websites. HTML vormt steeds de basis en fundering van elke website. Door een reeks tags en digitale bouwblokken ontstaat er een webpagina.
+CSS (Cascading Style Sheets) bepaalt hoe de HTML van een webpagina wordt weergegeven. CSS omvat dus de opmaak en indeling van je website. CSS maakt gebruik van selectors en declaraties om terugkerende elementen vorm te geven.
+Javascript is een programmeertaal voor het digitale web. Dankzij Javascript kunnen we HTML en CSS dynamisch maken. Met Javascript kunnen we berekeningen maken, data valideren en een website interactief maken.
+3.	Wat is een HTML tag en een HTML element? Hoe open je een HTML tag en hoe sluit
+je een HTML tag. Maak hiervoor voorbeelden en leg uit.
+HTML gebruikt tags om bijvoorbeeld de positie en weergave van elementen op een pagina aan te geven. Notatie. Een tag staat altijd tussen een < en een >. Om te sluiten gebruik je een < /en een >.
+Voorbeeld:
+<html> 
+	inhoud
+</html>
+Elementen geven structuur aan een HTML-document en vertelt de browser hoe je wilt dat je website wordt gepresenteerd.
+4.	HTML gebruikt basis tags om structuur op te bouwen. De <html>, <head> en <body>.
+Geef voor elke element aan waarvoor het dient.
+Het <html>-element  representeert de 'root' (het element op het hoogste niveau) van een HTML-document. Er wordt daarom naar verwezen als het root-element. Alle andere elementen moeten nakomelingen zijn van dit element.
+Het HTML <head>-element bevat leesbare informatie (metadata) over het document, zoals de titel, scripts en style sheets.
+Het HTML <body>-element vertegenwoordigt de inhoud van een HTML-document. Er kan slechts één <body> -element in een document voorkomen.
+5.	Op HTML elementen kun je attributen gebruiken. Wat zijn HTML attributen ? Geef
+minimaal 5 attributen en maak voorbeelden waar je de attributen in toepast.
+
+Een attribuut wordt gebruikt om de kenmerken van een element te definiëren. Alle attributen zijn samengesteld uit twee delen "een naam en een waarde".
+Id: Definieert een unieke id (naam) voor een element.
+Class: Specificeert een of meerdere class-namen voor een element.
+Style: Het style attribuut definieert een inline CSS-stijl voor het element.
+Title: Het title attribuut kan worden gebruikt om extra informatie toe te voegen.
+Hidden: Dit attribuut geeft aan of het element zichtbaar moet zijn of niet.
+
+6.	Waarom is een goede HTML Structuur belangrijk? Is deze code een goede structuur?
+Leg uit.
+Het doel is om het voor ontwikkelaars gemakkelijker te maken om onderscheid te maken tussen verschillende soorten gegevens. Het is om uw webbrowser te vertellen wat elk onderdeel van een website is. Met HTML kunt u dus kopteksten, alinea's, links, afbeeldingen en meer definiëren, zodat uw browser weet hoe de webpagina die u bekijkt, moet worden gestructureerd.
+De code geeft geen goed structuur aan. Het heeft geen elementen en tags, dus de webbrowser weet ook niet hoe het gestructureerd moet worden.
+7.	Wat is het verschil tussen inline en block elementen?
+Standaard dwingen inline-elementen een nieuwe regel niet om in de documentstroom te beginnen. Blokelementen daarentegen veroorzaken meestal een regeleinde (hoewel dit, zoals gewoonlijk, kan worden gewijzigd met CSS).
+8.	Wat betekent nesting? Codeer een voorbeeld met nesting erin.
+HTML-elementen in andere HTML-elementen. 
+Voorbeeld: 
+<ul>
+	<li> </li>
+	<li> </li>
+	<li> </li>
+</ul>
+
+
+
+9.	Sinds de komst van HTML5 zijn er elementen die betekenissen hebben. Wat
+wordt er bedoeld met HTML semantics? Waarom is het gebruik van
+semantics belangrijk?
+Semantische HTML is het gebruik van HTML-markup. Het is belangrijk om de semantiek of betekenis van de informatie op webpagina's en webapplicaties te versterken in plaats van alleen om de presentatie of het uiterlijk ervan te definiëren.
+10.	Wat voor content zou je in de volgende elementen gebruiken?
+Geef in je antwoord voor elk element een toelichting.
+● <header> : staat voor inleidende inhoud
+● <footer> : vertegenwoordigt een voettekst. Een voettekst bevat doorgaans informatie over de auteur van de sectie.
+● <main>: vertegenwoordigt de dominante inhoud van de <body> van een document.
+● <nav>: een sectie van een pagina die tot doel heeft navigatielinks te bieden
+● <section>: een op zichzelf staande sectie - die geen specifieker semantisch element heeft om het te vertegenwoordigen
+● <aside>: staat voor een sectie waarvan de inhoud zijdelinks gerelateerd is aan de inhoud van de rest. De informatie die in het <aside>-statement staat, kan beschouwd worden als aparte inhoud.
+● <article>: een op zichzelf staande compositie in een document, pagina, toepassing of site, die bedoeld is om onafhankelijk te worden verspreid.
+
+11.	Onderzoek en leg uit waarom headers zowel belangrijk zijn voor zoekmachines als
+voor de gebruikers.
+Gebruikers bladeren vaak een pagina door de koptekst. Het is belangrijk om koppen te gebruiken om de documentstructuur te tonen. Zoekmachines gebruiken de koppen om de structuur en inhoud van uw webpagina's te indexeren.
+
+12.	Onderzoek hoe je een text-header aanmaakt en reproduceer het volgende resultaat:
+Voorbeeld:
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+13.	Onderzoek wat een paragraaf tag is en hoe hij gebruikt wordt.
+Geef hier een voorbeeld bij.
+Een paragraaf tag wordt gebruikt om tekst in te voegen. Het begint altijd op een nieuwe regel en browsers voegen automatisch wat witruimte (een marge) toe voor en na een paragraaf.
+Voorbeeld:
+<p> inhoud tekst</p>
+
+14.	Onderzoek en leg het verschil tussen het stoppen van alle tekst in één
+paragraaf tag, en het opsplitsen van de tekst in meerdere tags uit.
+Bij het toevoegen van meerdere paragraaf tags kan de tekst met witregels geordend worden, zodat het netter en beter leesbaar is voor de gebruiker.  
+
+18. Onderzoek welke 4 attributen een link tag kan hebben, leg uit wat deze doen
+en voeg deze als voorbeeld toe op je website.
+Attributen: 
+Download: het bestand wordt gedownload wanneer een gebruiker op de hyperlink klikt.
+Href: Specificeert de URL van de pagina waar de link naartoe gaat
+rel: Specificeert de relatie tussen het huidige document en het gekoppelde document
+Type: Specificeert het mediatype van het gekoppelde document
+
+
+
+
+
+
+
+
+
+
+
+
+
+
