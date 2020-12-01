@@ -1,0 +1,13 @@
+p::before {
+  color: white;
+  opacity: 0.9;
+  content: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum cupiditate amet odio maiores voluptatibus numquam, nobis minus! Iusto mollitia quis deleniti blanditiis ex facilis recusandae vero dicta laudantium asperiores beatae ad placeat amet a eligendi laboriosam, aliquam itaque voluptate libero nihil. Modi voluptatibus eligendi neque culpa aut? Excepturi repellat placeat sit iure quasi ratione animi eum nulla autem, error nesciunt veritatis, neque ex? Libero nobis, porro quidem veritatis laboriosam ab natus quibusdam, ullam voluptatum consequatur eligendi corrupti consequuntur atque non corporis optio hic! Similique quidem rerum dicta, minus ad error odit autem laboriosam ab ut obcaecati nam laudantium sed tempora mollitia voluptas dignissimos eius eveniet eos quibusdam repellendus architecto! Accusamus, placeat saepe obcaecati atque cumque corrupti omnis sapiente vitae enim, laborum quaerat? Accusantium debitis sed corrupti nesciunt veritatis possimus excepturi exercitationem culpa et architecto! Est ipsam labore excepturi libero impedit eligendi blanditiis ullam enim natus nihil. Consequatur vel ipsum saepe laudantium dolorum deserunt, soluta autem ipsa veritatis? Sed voluptatum temporibus laboriosam iste dignissimos iusto, ratione maiores totam eum quis error? Beatae minus quasi deserunt dolorem itaque eum, fuga officiis ducimus debitis facere voluptate perferendis explicabo sit facilis saepe esse, quaerat laudantium nulla sequi. Quo natus neque necessitatibus culpa pariatur ab.";
+}
+
+.banner {
+  width: 800px;
+  height: 300px;
+  border: 1px solid black;
+  background-image: url("https://images.unsplash.com/photo-1606762803100-5b4833aaccc0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1333&q=80");
+  background-size: cover;
+}

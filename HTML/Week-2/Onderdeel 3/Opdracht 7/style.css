@@ -1,0 +1,33 @@
+.container {
+  position: relative;
+}
+
+h2{
+  color: rgb(5, 66, 102);
+  margin-bottom: 0px;
+  font-weight: 300;
+}
+
+span{
+  color: white;
+  font-weight: 300;
+}
+
+p{
+  color: yellow;
+  font-size: 14px;
+  position: relative;
+  left: 15%;
+  margin-top: 0px;
+}
+
+.topleft {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  font-size: 18px;
+}
+
+img { 
+  width: 40%;
+  opacity: 0.9;

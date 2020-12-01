@@ -1,0 +1,18 @@
+.outer {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: black;
+  position: relative;
+  left: 30%;
+}
+
+.inner {
+  width: 220px;
+  height: 70px;
+  position: relative;
+  right: 23%;
+  top: 30%;
+  background-color: black;
+  border-radius: 60px;
+}
