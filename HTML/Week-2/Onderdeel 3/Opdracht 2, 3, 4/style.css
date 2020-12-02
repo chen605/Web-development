@@ -1,11 +1,11 @@
 /* ==== Opdracht 2 ==== */
 
-/* h1 {
+h1 {
   color: rgb(255, 0, 0);
   position: fixed;
   top: 50px;
   right: 50px;
-} */
+}
 
 /* ==== Opdracht 3 ==== */
 
@@ -18,9 +18,9 @@
 
 /* ==== Opdracht 4 ==== */
 
-h1 {
+/* h1 {
   color: rgb(255, 0, 0);
   position: relative;
   left: 50px;
   top: 100px;
-}
+} */
