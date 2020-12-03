@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800");
+
+html,
+body {
+  background-image: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  font-family: "Montserrat", helvetica, arial, sans-serif;
+  font-size: 14px;
+  color: white;
+  font-weight: 300;
+  background-color: black;
+}
+
+header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  height: 38px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie_card {
+  position: relative;
+  width: 740px;
+  height: 300px;
+  overflow: hidden;
+  border: 1px solid rgb(192, 191, 191);
+  box-shadow: 0px 0px 15px #ebd05c;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+  margin-top: 2%;
+}
+
+.movie_card:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 0px 35px #427fcf;
+}
+
+.movie-poster {
+  margin: 10px 20px 0px 10px;
+  width: 200px;
+  height: 280px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.inner {
+  width: 400px;
+  position: absolute;
+  left: 30%;
+  top: 0%;
+}
+
+h4 {
+  font-weight: 300;
+  color: rgb(62, 186, 243);
+}
+
+h1 {
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+/* ===== Genre type ===== */
+
+ul {
+  position: relative;
+  right: 9%;
+}
+
+ul li {
+  margin-right: 20px;
+  display: inline-block;
+  margin-top: 2%;
+}
+
+.genre {
+  border: 1px solid rgba(192, 191, 191, 0.4);
+  border-radius: 10px;
+  font-size: 12px;
+  padding: 3px;
+}
+
+/* ========= Movie background-images ==========  */
+
+#bright {
+  background: linear-gradient(to right, rgb(20, 20, 19) 20%, transparent 130%),
+    url("https://occ-0-2433-448.1.nflxso.net/art/cd5c9/3e192edf2027c536e25bb5d3b6ac93ced77cd5c9.jpg");
+  background-size: cover;
+}
+
+#tomb {
+  background: linear-gradient(to right, rgb(20, 20, 19) 20%, transparent 130%),
+    url("https://fsmedia.imgix.net/cd/c9/5e/ba/4817/4d9a/93f0/c776ec32ecbc/lara-crofts-neck-looks-unnatural-in-the-new-poster-for-tomb-raider.png");
+  background-size: cover;
+}
+
+/* ====== Responsive ====== */
+
+@media (max-width: 760px) {
+  header {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .movie_card {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .inner p {
+    width: 90%;
+    /* display: relative;
+    left: 0; */
+    /* align-items: center; */
+    /* float: left; */
+  }
+  .inner {
+    position: relative;
+    left: 10%;
+  }
+  ul li {
+    margin-top: 0px;
+  }
+
+  .movie-poster {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  header {
+    font-size: 10px;
+  }
+
+  .inner p {
+    width: 65%;
+  }
+
+  .inner {
+    position: relative;
+    left: 5%;
+  }
+}
