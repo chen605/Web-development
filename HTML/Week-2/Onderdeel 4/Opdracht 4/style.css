@@ -6,22 +6,22 @@ button {
   border: none;
 }
 
-button:before,
-button:after {
+button::before,
+button::after {
   content: "";
   position: absolute;
   height: 83%;
   width: 10%;
 }
 
-button:before {
+button::before {
   border-left: 7px solid rgb(255, 94, 0);
   border-top: 7px solid rgb(255, 94, 0);
   top: 0;
   left: 0;
 }
 
-button:after {
+button::after {
   bottom: 0;
   right: 0;
   border-right: 7px solid rgb(255, 94, 0);
