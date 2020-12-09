@@ -119,4 +119,7 @@ nav a {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-} ;
+  .page-description p {
+    text-align: left;
+  }
+}
