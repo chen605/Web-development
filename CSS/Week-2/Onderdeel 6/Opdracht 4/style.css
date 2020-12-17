@@ -1,0 +1,58 @@
+#delay_demo {
+  position: relative;
+  width: 500px;
+  height: 400px;
+  margin: 0 auto 10px;
+  border: 3px black solid;
+  background-color: lightgray;
+  padding: 10px;
+}
+#delay_demo div {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 160px;
+  left: 210px;
+  text-align: center;
+}
+
+#main2 {
+  border: 1px solid black;
+  transition: all 1s ease-in-out;
+}
+#main2a {
+  border: 1px solid black;
+  transition-property: top, left;
+  transition-duration: 1s, 1s;
+  transition-delay: 2s, 1s;
+}
+#main2b {
+  border: 1px solid black;
+  transition: all 1s ease-in-out;
+}
+#delay_demo .center {
+  width: 500px;
+  position: absolute;
+  bottom: 20px;
+}
+#delay_demo:hover #main2,
+#delay_demo.hover_effect #main2 {
+  top: 0px;
+  left: 0px;
+}
+#delay_demo:hover #main2a,
+#delay_demo.hover_effect #main2a {
+  top: 320px;
+  left: 0px;
+}
+#delay_demo:hover #main2b,
+#delay_demo.hover_effect #main2b {
+  top: 0px;
+  left: 420px;
+}
+
+p {
+  position: relative;
+  top: 5px;
+  font-size: 28px;
+}

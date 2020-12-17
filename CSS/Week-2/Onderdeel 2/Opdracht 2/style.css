@@ -1,0 +1,12 @@
+body {
+  background-color: lightgreen;
+}
+
+p {
+  background-color: green;
+}
+span {
+  background-color: white;
+  width: 100px;
+  height: 100px;
+}

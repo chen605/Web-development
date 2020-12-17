@@ -1,0 +1,10 @@
+@import "./assets/_colors.scss";
+
+button {
+  background-color: map-get($color, button-color);
+  &:hover {
+    box-shadow: 12px 10px lightblue;
+    transform: scale(1.1);
+    background-color: map-get($color, button-hover-color);
+  }
+}

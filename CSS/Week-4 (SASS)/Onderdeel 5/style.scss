@@ -1,0 +1,16 @@
+$small: 400px;
+$medium: 720px;
+
+.container {
+  width: 100%;
+  height: 200px;
+  color: black;
+  @media (max-width: $medium) {
+    text-align: center;
+    color: red;
+  }
+  @media (max-width: $small) {
+    text-align: center;
+    color: blue;
+  }
+}

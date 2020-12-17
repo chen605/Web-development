@@ -1,0 +1,39 @@
+@import "./partials/assets/colors";
+@import "./partials/assets/fonts";
+@import "./partials/assets/components";
+
+html,
+body {
+  font-family: $font;
+  padding: 0;
+  margin: 0;
+}
+
+#info li {
+  @include header();
+}
+
+.banner {
+  @include banner();
+}
+
+h1 {
+  @include title();
+}
+
+/* ====== Popular Dishes ====== */
+
+.dishes {
+  @include dishes();
+}
+
+/* ======= Menu ======= */
+.menu {
+  @include menu();
+}
+
+/* ====== Footer ====== */
+
+footer {
+  @include footer();
+}

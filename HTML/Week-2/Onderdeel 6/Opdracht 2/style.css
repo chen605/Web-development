@@ -1,8 +1,0 @@
-p {
-  color: black;
-  transition: color 1s ease-in-out;
-}
-
-p:hover {
-  color: red;
-}
