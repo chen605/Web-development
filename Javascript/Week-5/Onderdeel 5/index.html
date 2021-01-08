@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Arrays</h1>
+    <script>
+      let arr = [0, 1, 2, 3, 4, 5 % 2, 6 % 4, 7 % 4, 8 % 1, 9 % 5];
+      console.log(arr);
+      let arr2 = ["Appel", "Peer", "Kiwi", "Aardbei", "Mandarijn"];
+      console.log(arr2);
+      console.log(arr2[0]);
+      console.log(arr2[3]);
+
+      let index = arr[Math.floor(Math.random() * 10)];
+      console.log(arr2[index]);
+      // arr2.push('fruit'); pushed een waarde die je aangegeven hebt naar het einde van je array.
+      // arr2.pop(); verwijdert het laatste element van je array.
+      // arr2.slice(0, 4); geeft een kopie van een deel van een array terug naar een nieuw arrayobject dat van begin tot eind is geselecteerd.
+      // arr2.splice(start[, deleteCount[, item1[, item2[, ...]]]]);  past de inhoud van een array aan door bestaande elementen te verwijderen en/of nieuwe elementen toe te voegen.
+      // arr2.sort(); sorteert de elementen van een array op hun plaats en retourneert de gesorteerde array.
+      console.log(arr2.length);
+      arr2[1] = "Sinaasappel";
+      [arr2[3], arr2[4]] = [arr2[4], arr2[3]];
+    </script>
+  </body>
+</html>

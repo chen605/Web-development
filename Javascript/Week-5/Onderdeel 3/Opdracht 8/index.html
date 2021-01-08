@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"
+        defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"
+        defer></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        table,
+        th,
+        td {
+            border: solid black 1px;
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d-flex justify-content-around">
+        <div>
+            <h1>Wiskunde</h1>
+            <table class="tbl__wiskunde" id="tbl__wiskunde" style="text-align:center" align="center" valign:"top">
+                <thead class="tbl__head">
+                    <tr>
+                        <th>Naam</th>
+                        <th>Cijfer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="student__tbl1">
+                        <td class="tbl1__naam">Willem</td>
+                        <td class="tbl1__cijfer" id="wiskunde__cijfer1" onclick="changeNum(this)"><span>5</span></td>
+                    </tr>
+                    <tr class="student__tbl2">
+                        <td class="tbl2__naam">Jan</td>
+                        <td class="tbl2__cijfer" id="wiskunde__cijfer2" onclick="changeNum(this)"><span>7</span></td>
+                    </tr>
+                    <tr class="student__tbl3">
+                        <td class="tbl3__naam">Kim Sing</td>
+                        <td class="tbl3__cijfer" id="wiskunde__cijfer3" onclick="changeNum(this)"><span>4</span></td>
+                    </tr>
+                    <tr class="student__tbl4">
+                        <td class="tbl4__naam">Samantha</td>
+                        <td class="tbl4__cijfer" id="wiskunde__cijfer4" onclick="changeNum(this)"><span>5</span></td>
+                    </tr>
+                    <tr class="student__tbl5">
+                        <td class="tbl5__naam">Joyce</td>
+                        <td class="tbl5__cijfer" id="wiskunde__cijfer5" onclick="changeNum(this)"><span>2</span></td>
+                    </tr>
+                    <tr class="student__tbl6">
+                        <td class="tbl6__naam">Gareth</td>
+                        <td class="tbl6__cijfer" id="wiskunde__cijfer6" onclick="changeNum(this)"><span>6</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h1>Natuurkunde</h1>
+            <table class="tbl__natuurkunde" id="tbl__natuurkunde" style="text-align:center" align="center" valign:"top">
+                <thead class="tbl__head">
+                    <tr>
+                        <th>Naam</th>
+                        <th>Cijfer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="student__tbl1">
+                        <td class="tbl1__naam">Willem</td>
+                        <td class="tbl1__cijfer" id="natuurkunde__cijfer1" onclick="changeNum(this)"><span>66</span>
+                        </td>
+                    </tr>
+                    <tr class="student__tbl2">
+                        <td class="tbl2__naam">Jan</td>
+                        <td class="tbl2__cijfer" id="natuurkunde__cijfer2" onclick="changeNum(this)"><span>7</span></td>
+                    </tr>
+                    <tr class="student__tbl3">
+                        <td class="tbl3__naam">Kim Sing</td>
+                        <td class="tbl3__cijfer" id="natuurkunde__cijfer3" onclick="changeNum(this)"><span>4</span></td>
+                    </tr>
+                    <tr class="student__tbl4">
+                        <td class="tbl4__naam">Samantha</td>
+                        <td class="tbl4__cijfer" id="natuurkunde__cijfer4" onclick="changeNum(this)"><span>5</span></td>
+                    </tr>
+                    <tr class="student__tbl5">
+                        <td class="tbl5__naam">Joyce</td>
+                        <td class="tbl5__cijfer" id="natuurkunde__cijfer5" onclick="changeNum(this)"><span>2</span></td>
+                    </tr>
+                    <tr class="student__tbl6">
+                        <td class="tbl6__naam">Gareth</td>
+                        <td class="tbl6__cijfer" id="natuurkunde__cijfer6" onclick="changeNum(this)"><span>6</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h1>Nederlands</h1>
+            <table class="tbl__nederlands" id="tbl__nederlands" style="text-align:center" align="center" valign:"top">
+                <thead class="tbl__head">
+                    <tr>
+                        <th>Naam</th>
+                        <th>Cijfer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="student__tbl1">
+                        <td class="tbl1__naam">Willem</td>
+                        <td class="tbl1__cijfer" id="nederlands__cijfer1" onclick="changeNum(this)"><span>66</span>
+                        </td>
+                    </tr>
+                    <tr class="student__tbl2">
+                        <td class="tbl2__naam">Jan</td>
+                        <td class="tbl2__cijfer" id="nederlands__cijfer2" onclick="changeNum(this)"><span>7</span></td>
+                    </tr>
+                    <tr class="student__tbl3">
+                        <td class="tbl3__naam">Kim Sing</td>
+                        <td class="tbl3__cijfer" id="nederlands__cijfer3" onclick="changeNum(this)"><span>4</span></td>
+                    </tr>
+                    <tr class="student__tbl4">
+                        <td class="tbl4__naam">Samantha</td>
+                        <td class="tbl4__cijfer" id="nederlands__cijfer4" onclick="changeNum(this)"><span>5</span></td>
+                    </tr>
+                    <tr class="student__tbl5">
+                        <td class="tbl5__naam">Joyce</td>
+                        <td class="tbl5__cijfer" id="nederlands__cijfer5" onclick="changeNum(this)"><span>2</span></td>
+                    </tr>
+                    <tr class="student__tbl6">
+                        <td class="tbl6__naam">Gareth</td>
+                        <td class="tbl6__cijfer" id="nederlands__cijfer6" onclick="changeNum(this)"><span>6</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h1>Engels</h1>
+            <table class="tbl__engels" id="tbl__engels" style="text-align:center" align="center" valign:"top">
+                <thead class="tbl__head">
+                    <tr>
+                        <th>Naam</th>
+                        <th>Cijfer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="student__tbl1">
+                        <td class="tbl1__naam">Willem</td>
+                        <td class="tbl1__cijfer" id="engels__cijfer1" onclick="changeNum(this)"><span>66</span>
+                        </td>
+                    </tr>
+                    <tr class="student__tbl2">
+                        <td class="tbl2__naam">Jan</td>
+                        <td class="tbl2__cijfer" id="engels__cijfer2" onclick="changeNum(this)"><span>7</span></td>
+                    </tr>
+                    <tr class="student__tbl3">
+                        <td class="tbl3__naam">Kim Sing</td>
+                        <td class="tbl3__cijfer" id="engels__cijfer3" onclick="changeNum(this)"><span>4</span></td>
+                    </tr>
+                    <tr class="student__tbl4">
+                        <td class="tbl4__naam">Samantha</td>
+                        <td class="tbl4__cijfer" id="engels__cijfer4" onclick="changeNum(this)"><span>5</span></td>
+                    </tr>
+                    <tr class="student__tbl5">
+                        <td class="tbl5__naam">Joyce</td>
+                        <td class="tbl5__cijfer" id="engels__cijfer5" onclick="changeNum(this)"><span>2</span></td>
+                    </tr>
+                    <tr class="student__tbl6">
+                        <td class="tbl6__naam">Gareth</td>
+                        <td class="tbl6__cijfer" id="engels__cijfer6" onclick="changeNum(this)"><span>6</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="d-flex justify-content-center">
+        <div>
+            <h1>Resultaat</h1>
+            <table class="tbl__resultaat" id="tbl__resultaat" style="text-align:center" align="center" valign:"top">
+                <thead class="tbl__head">
+                    <tr>
+                        <th>Naam</th>
+                        <th>talen</th>
+                        <th>betavakken</th>
+                        <th>overgaan > 6.5 ?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="student__tbl1">
+                        <td class="tbl1__naam">Willem</td>
+                        <td class="tbl1__cijfer" id="resultaat1[talen]"><span>66</span></td>
+                        <td class="tbl1__cijfer" id="resultaat1[betavakken]"><span>66</span></td>
+                        <td class="tbl1__cijfer" id="resultaat1[overgaan]"><span>yes</span></td>
+                    </tr>
+                    <tr class="student__tbl2">
+                        <td class="tbl2__naam">Jan</td>
+                        <td class="tbl2__cijfer" id="resultaat2[talen]"><span>7</span></td>
+                        <td class="tbl2__cijfer" id="resultaat2[betavakken]"><span>7</span></td>
+                        <td class="tbl2__cijfer" id="resultaat2[overgaan]"><span>no</span></td>
+                    </tr>
+                    <tr class="student__tbl3">
+                        <td class="tbl3__naam">Kim Sing</td>
+                        <td class="tbl3__cijfer" id="resultaat3[talen]"><span>4</span></td>
+                        <td class="tbl3__cijfer" id="resultaat3[betavakken]"><span>4</span></td>
+                        <td class="tbl3__cijfer" id="resultaat3[overgaan]"><span>yes</span></td>
+                    </tr>
+                    <tr class="student__tbl4">
+                        <td class="tbl4__naam">Samantha</td>
+                        <td class="tbl4__cijfer" id="resultaat4[talen]"><span>5</span></td>
+                        <td class="tbl4__cijfer" id="resultaat4[betavakken]"><span>5</span></td>
+                        <td class="tbl4__cijfer" id="resultaat4[overgaan]"><span>no</span></td>
+                    </tr>
+                    <tr class="student__tbl5">
+                        <td class="tbl5__naam">Joyce</td>
+                        <td class="tbl5__cijfer" id="resultaat5[talen]"><span>2</span></td>
+                        <td class="tbl5__cijfer" id="resultaat5[betavakken]"><span>2</span></td>
+                        <td class="tbl5__cijfer" id="resultaat5[overgaan]"><span>yes</span></td>
+                    </tr>
+                    <tr class="student__tbl6">
+                        <td class="tbl6__naam">Gareth</td>
+                        <td class="tbl6__cijfer" id="resultaat6[talen]"><span>6</span></td>
+                        <td class="tbl6__cijfer" id="resultaat6[betavakken]"><span>6</span></td>
+                        <td class="tbl6__cijfer" id="resultaat6[overgaan]"><span>yes</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const main = () => {
+            willemResultaat();
+            janResultaat();
+            kimSingResultaat();
+            samanthaResultaat();
+            joyceResultaat();
+            garethResultaat();
+        };
+        const changeNum = (obj) => {
+            let cijfer = obj.querySelector("span").innerHTML;
+            let newcijfer = parseInt(cijfer)
+            //Condition to check if num is between 1 and 10
+            let updatecijfer = prompt('Wat is de nieuwe cijfer', newcijfer)
+            while (updatecijfer < 1 || updatecijfer > 10 || isNaN(updatecijfer)) {
+                updatecijfer = prompt('Invalid input try again. Number must between 1-10')
+            }
+            obj.querySelector('span').innerHTML = updatecijfer;
+            main();
+        };
+        // gemiddelde resultaat berekenen van Willem.
+        const willemResultaat = () => {
+            // haal de resultaten uit verschilende tabellen
+            const willemTbl1 = document.getElementById('wiskunde__cijfer1');
+            const willemTbl2 = document.getElementById('natuurkunde__cijfer1');
+            const willemTbl3 = document.getElementById('nederlands__cijfer1');
+            const willemTbl4 = document.getElementById('engels__cijfer1');
+            const willemResultaat1 = document.getElementById('resultaat1[talen]');
+            const willemResultaat2 = document.getElementById('resultaat1[betavakken]');
+            const willemResultaat3 = document.getElementById('resultaat1[overgaan]');
+            let cijfer2 = parseInt(willemTbl2.querySelector('span').innerHTML);
+            let cijfer1 = parseInt(willemTbl1.querySelector('span').innerHTML);
+            let cijfer3 = parseInt(willemTbl3.querySelector('span').innerHTML);
+            let cijfer4 = parseInt(willemTbl4.querySelector('span').innerHTML);
+            // tel ze allemaal bij elkaar op en verdeel naar gemiddelde
+            let resultaat1 = (cijfer1 + cijfer2 + cijfer3 + cijfer4) / 4;
+            let resultaat2 = (cijfer1 + cijfer2) / 2;
+            let resultaat3 = (cijfer3 + cijfer4) / 2;
+            // display in nieuwe tabel.
+            willemResultaat3.innerHTML = resultaat1;
+            willemResultaat2.innerHTML = resultaat2;
+            willemResultaat1.innerHTML = resultaat3;
+            markGrade(resultaat1, resultaat2, resultaat3, willemResultaat1, willemResultaat2, willemResultaat3,cijfer1, cijfer2, cijfer3, cijfer4, willemTbl1, willemTbl2, willemTbl3, willemTbl4)
+        };
+        // gemiddelde resultaat berekenen van Jan.
+        const janResultaat = () => {
+            // haal de resultaten uit verschilende tabellen
+            const janTbl1 = document.getElementById('wiskunde__cijfer2');
+            const janTbl2 = document.getElementById('natuurkunde__cijfer2');
+            const janTbl3 = document.getElementById('nederlands__cijfer2');
+            const janTbl4 = document.getElementById('engels__cijfer2');
+            const janResultaat1 = document.getElementById('resultaat2[talen]');
+            const janResultaat2 = document.getElementById('resultaat2[betavakken]');
+            const janResultaat3 = document.getElementById('resultaat2[overgaan]');
+            let cijfer2 = parseInt(janTbl2.querySelector('span').innerHTML);
+            let cijfer1 = parseInt(janTbl1.querySelector('span').innerHTML);
+            let cijfer3 = parseInt(janTbl3.querySelector('span').innerHTML);
+            let cijfer4 = parseInt(janTbl4.querySelector('span').innerHTML);
+            // tel ze allemaal bij elkaar op en verdeel naar gemiddelde
+            let resultaat1 = (cijfer1 + cijfer2 + cijfer3 + cijfer4) / 4;
+            let resultaat2 = (cijfer1 + cijfer2) / 2;
+            let resultaat3 = (cijfer3 + cijfer4) / 2;
+            // display in nieuwe tabel.
+            janResultaat3.innerHTML = resultaat1;
+            janResultaat2.innerHTML = resultaat2;
+            janResultaat1.innerHTML = resultaat3;
+            markGrade(resultaat1, resultaat2, resultaat3, janResultaat1, janResultaat2, janResultaat3,cijfer1, cijfer2, cijfer3, cijfer4, janTbl1, janTbl2, janTbl3, janTbl4)
+        };
+        // gemiddelde resultaat berekenen van Kim sing.
+        const kimSingResultaat = () => {
+            // haal de resultaten uit verschilende tabellen
+            const kimSingTbl1 = document.getElementById('wiskunde__cijfer3');
+            const kimSingTbl2 = document.getElementById('natuurkunde__cijfer3');
+            const kimSingTbl3 = document.getElementById('nederlands__cijfer3');
+            const kimSingTbl4 = document.getElementById('engels__cijfer3');
+            const kimSingResultaat1 = document.getElementById('resultaat3[talen]');
+            const kimSingResultaat2 = document.getElementById('resultaat3[betavakken]');
+            const kimSingResultaat3 = document.getElementById('resultaat3[overgaan]');
+            let cijfer2 = parseInt(kimSingTbl2.querySelector('span').innerHTML);
+            let cijfer1 = parseInt(kimSingTbl1.querySelector('span').innerHTML);
+            let cijfer3 = parseInt(kimSingTbl3.querySelector('span').innerHTML);
+            let cijfer4 = parseInt(kimSingTbl4.querySelector('span').innerHTML);
+            // tel ze allemaal bij elkaar op en verdeel naar gemiddelde
+            let resultaat1 = (cijfer1 + cijfer2 + cijfer3 + cijfer4) / 4;
+            let resultaat2 = (cijfer1 + cijfer2) / 2;
+            let resultaat3 = (cijfer3 + cijfer4) / 2;
+            // display in nieuwe tabel.
+            kimSingResultaat3.innerHTML = resultaat1;
+            kimSingResultaat2.innerHTML = resultaat2;
+            kimSingResultaat1.innerHTML = resultaat3;
+            markGrade(resultaat1, resultaat2, resultaat3, kimSingResultaat1, kimSingResultaat2, kimSingResultaat3, cijfer1, cijfer2, cijfer3, cijfer4, kimSingTbl1, kimSingTbl2, kimSingTbl3, kimSingTbl4)
+        };
+        // gemiddelde resultaat berekenen van samantha.
+        const samanthaResultaat = () => {
+            // haal de resultaten uit verschilende tabellen
+            const samanthaTbl1 = document.getElementById('wiskunde__cijfer4');
+            const samanthaTbl2 = document.getElementById('natuurkunde__cijfer4');
+            const samanthaTbl3 = document.getElementById('nederlands__cijfer4');
+            const samanthaTbl4 = document.getElementById('engels__cijfer4');
+            const samanthaResultaat1 = document.getElementById('resultaat4[talen]');
+            const samanthaResultaat2 = document.getElementById('resultaat4[betavakken]');
+            const samanthaResultaat3 = document.getElementById('resultaat4[overgaan]');
+            let cijfer2 = parseInt(samanthaTbl2.querySelector('span').innerHTML);
+            let cijfer1 = parseInt(samanthaTbl1.querySelector('span').innerHTML);
+            let cijfer3 = parseInt(samanthaTbl3.querySelector('span').innerHTML);
+            let cijfer4 = parseInt(samanthaTbl4.querySelector('span').innerHTML);
+            // tel ze allemaal bij elkaar op en verdeel naar gemiddelde
+            let resultaat1 = (cijfer1 + cijfer2 + cijfer3 + cijfer4) / 4;
+            let resultaat2 = (cijfer1 + cijfer2) / 2;
+            let resultaat3 = (cijfer3 + cijfer4) / 2;
+            // display in nieuwe tabel.
+            samanthaResultaat3.innerHTML = resultaat1;
+            samanthaResultaat2.innerHTML = resultaat2;
+            samanthaResultaat1.innerHTML = resultaat3;
+
+            markGrade(resultaat1, resultaat2, resultaat3, samanthaResultaat1, samanthaResultaat2, samanthaResultaat3, cijfer1, cijfer2, cijfer3, cijfer4, samanthaTbl1, samanthaTbl2, samanthaTbl3, samanthaTbl4)
+        };
+        // gemiddelde resultaat berekenen van joyce.
+        const joyceResultaat = () => {
+            // haal de resultaten uit verschilende tabellen
+            const joyceTbl1 = document.getElementById('wiskunde__cijfer5');
+            const joyceTbl2 = document.getElementById('natuurkunde__cijfer5');
+            const joyceTbl3 = document.getElementById('nederlands__cijfer5');
+            const joyceTbl4 = document.getElementById('engels__cijfer5');
+            const joyceResultaat1 = document.getElementById('resultaat5[talen]');
+            const joyceResultaat2 = document.getElementById('resultaat5[betavakken]');
+            const joyceResultaat3 = document.getElementById('resultaat5[overgaan]');
+            let cijfer2 = parseInt(joyceTbl2.querySelector('span').innerHTML);
+            let cijfer1 = parseInt(joyceTbl1.querySelector('span').innerHTML);
+            let cijfer3 = parseInt(joyceTbl3.querySelector('span').innerHTML);
+            let cijfer4 = parseInt(joyceTbl4.querySelector('span').innerHTML);
+            // tel ze allemaal bij elkaar op en verdeel naar gemiddelde
+            let resultaat1 = (cijfer1 + cijfer2 + cijfer3 + cijfer4) / 4;
+            let resultaat2 = (cijfer1 + cijfer2) / 2;
+            let resultaat3 = (cijfer3 + cijfer4) / 2;
+            // display in nieuwe tabel.
+            joyceResultaat3.innerHTML = resultaat1;
+            joyceResultaat2.innerHTML = resultaat2;
+            joyceResultaat1.innerHTML = resultaat3;
+            markGrade(resultaat1, resultaat2, resultaat3, joyceResultaat1, joyceResultaat2, joyceResultaat3, cijfer1, cijfer2, cijfer3, cijfer4, joyceTbl1, joyceTbl2, joyceTbl3, joyceTbl4)
+        };
+        // gemiddelde resultaat berekenen van Gareth.
+        const garethResultaat = () => {
+            // haal de resultaten uit verschilende tabellen
+            const garethTbl1 = document.getElementById('wiskunde__cijfer6');
+            const garethTbl2 = document.getElementById('natuurkunde__cijfer6');
+            const garethTbl3 = document.getElementById('nederlands__cijfer6');
+            const garethTbl4 = document.getElementById('engels__cijfer6');
+            const garethResultaat1 = document.getElementById('resultaat6[talen]');
+            const garethResultaat2 = document.getElementById('resultaat6[betavakken]');
+            const garethResultaat3 = document.getElementById('resultaat6[overgaan]');
+            let cijfer1 = parseInt(garethTbl1.querySelector('span').innerHTML);
+            let cijfer2 = parseInt(garethTbl2.querySelector('span').innerHTML);
+            let cijfer3 = parseInt(garethTbl3.querySelector('span').innerHTML);
+            let cijfer4 = parseInt(garethTbl4.querySelector('span').innerHTML);
+            // tel ze allemaal bij elkaar op en verdeel naar gemiddelde
+            let resultaat1 = (cijfer1 + cijfer2 + cijfer3 + cijfer4) / 4;
+            let resultaat2 = (cijfer1 + cijfer2) / 2;
+            let resultaat3 = (cijfer3 + cijfer4) / 2;
+            // display in nieuwe tabel.
+            garethResultaat3.innerHTML = resultaat1;
+            garethResultaat2.innerHTML = resultaat2;
+            garethResultaat1.innerHTML = resultaat3;
+            markGrade(resultaat1, resultaat2, resultaat3, garethResultaat1, garethResultaat2, garethResultaat3, cijfer1, cijfer2, cijfer3, cijfer4, garethTbl1, garethTbl2, garethTbl3, garethTbl4)
+        };
+        // function to mark cells with a color.
+        const markGrade = (resultaat1, resultaat2, resultaat3, persoon1, persoon2, persoon3, cijfer1, cijfer2, cijfer3, cijfer4, tbl1, tbl2, tbl3, tbl4) => {
+            // resultaat vlak
+            if (resultaat1 < 6.5) {
+                persoon3.style.backgroundColor = "red";
+                persoon3.innerHTML = "NO";
+            } else {
+                persoon3.style.backgroundColor = "green";
+                persoon3.innerHTML = "YES";
+            }
+            // vak talen
+            if (resultaat3 < 5.5) {
+                persoon1.style.backgroundColor = "red";
+            } else if (cijfer1 >= 5.5 && cijfer1 < 7.5) {
+                persoon1.style.backgroundColor = "lightgreen";
+            } else {
+                persoon1.style.backgroundColor = "darkgreen";
+            }
+            // betavakken 
+            if (resultaat2 < 5.5) {
+                persoon2.style.backgroundColor = "red";
+            } else if (cijfer1 >= 5.5 && cijfer1 < 7.5) {
+                persoon2.style.backgroundColor = "lightgreen";
+            } else {
+                persoon2.style.backgroundColor = "darkgreen";
+            }
+
+            // wiskunde vak
+            if (cijfer1 < 5.5) {
+                tbl1.style.backgroundColor = "red";
+            } else if (cijfer1 >= 5.5 && cijfer1 < 7.5) {
+                tbl1.style.backgroundColor = "lightgreen";
+            } else {
+                tbl1.style.backgroundColor = "darkgreen";
+            }
+            // natuurkunde
+            if (cijfer2 < 5.5) {
+                tbl2.style.backgroundColor = "red";
+            } else if (cijfer2 >= 5.5 && cijfer2 < 7.5) {
+                tbl2.style.backgroundColor = "lightgreen";
+            } else {
+                tbl2.style.backgroundColor = "darkgreen";
+            }
+            // nederlands
+            if (cijfer3 < 5.5) {
+                tbl3.style.backgroundColor = "red";
+            } else if (cijfer3 >= 5.5 && cijfer3 < 7.5) {
+                tbl3.style.backgroundColor = "lightgreen";
+            } else {
+                tbl3.style.backgroundColor = "darkgreen";
+            }
+            // engels
+            if (cijfer4 < 5.5) {
+                tbl4.style.backgroundColor = "red";
+            } else if (cijfer4 >= 5.5 && cijfer4 < 7.5) {
+                tbl4.style.backgroundColor = "lightgreen";
+            } else {
+                tbl4.style.backgroundColor = "darkgreen";
+            }
+        }
+
+        main();
+
+    </script>
+</body>
+
+</html>

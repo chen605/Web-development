@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const Club = {
+        name: [
+          {
+            club1: "Niek-United",
+          },
+          {
+            club2: "FC Niek",
+          },
+          {
+            club3: "RKC NIEK",
+          },
+          {
+            club4: "JuveNIEK",
+          },
+        ],
+        type: "IT",
+        members: 11,
+        contacts: {
+          address: "3213KD",
+          tel: "0621387381",
+          contact: "Niek",
+        },
+      };
+      Club.name.push({ club5: "FeyeNiek" });
+
+      // const Person = function (name, age) {
+      //   this.name = name;
+      //   this.age = age;
+      // };
+
+      // const persons = [
+      //   new Person("Jan", 24),
+      //   new Person("Klaas", 15),
+      //   new Person("Yanis", 42),
+      //   new Person("Rupel", 55),
+      //   new Person("Hendrik", 32),
+      //   new Person("Mono", 28),
+      //   new Person("West", 23),
+      // ];
+      // persons.sort((a, b) => a.age - b.age);
+
+      // Object constructor
+      // const person = new Object();
+
+      // person.name = "Anand";
+      // person.getName = function () {
+      //   return this.name;
+      // };
+      // person.age = 20;
+
+      // literal constructor
+      // const person = {
+      //   name: "Anand",
+      //   getName: function () {
+      //     return this.name;
+      //   },
+      // };
+      // The constructor function is used for multiple entries under the same "object". The object initializer should only be used for a limited amount of entries,
+      //... The overhead of the constructor is an additional function call and a few extra properties to set (like the prototype).
+
+      //Opdracht 6
+      class Person {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+      }
+
+      const persons = [
+        new Person("Jan", 24),
+        new Person("Klaas", 15),
+        new Person("Yanis", 42),
+        new Person("Rupel", 55),
+        new Person("Hendrik", 32),
+        new Person("Mono", 28),
+        new Person("West", 23),
+      ];
+      persons.sort((a, b) => a.age - b.age);
+    </script>
+  </body>
+</html>

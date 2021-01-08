@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <body>
+    <p id="answer"></p>
+    <button onclick="answer()">click</button>
+    <script>
+    function answer() {
+    // hier kun je coderen
+    
+      function greet(){
+        console.log('Hello World')
+      }
+      greet()
+
+      function myName(name){
+        console.log(`Hello my name is ${name}`)
+      }
+      myName('Chen')
+      
+
+      function multiply(x, y){
+        console.log(x*y)
+      }
+      multiply(6, 4)
+
+      function correctName(knownName){
+        let names = ['John', 'Olly', 'Mo', 'Hendrik', 'Tony']
+        for(let name of names){
+          if(name === knownName){
+            return console.log(`Dit is een bekende van ons: ${name}`)  
+          }
+        }
+        return console.log('Onbekend in ons systeem')
+      }
+      correctName('Tony');
+
+      function randName(num){
+        switch(num){
+          case 1:
+            console.log('John')
+            break;
+          case 2:
+            console.log('Oly')
+            break;
+          case 3:
+            console.log('Mo')
+            break;
+          case 4:
+            console.log('Hendrik')
+            break;
+          case 5:
+            console.log('Tony')
+            break;
+          case 6:
+            console.log('Irus')
+            break;
+          case 7:
+            console.log('Peter')
+            break;
+          case 8:
+            console.log('Jan')
+            break;
+          default:
+            console.log('Onbekend naam')
+            break;
+        }
+      }
+      randName(Math.floor(Math.random() * 8 + 1))
+
+      // ARROW FUNCTIONS
+      const correctName2 = (knownName) =>{
+        let names = ['John', 'Olly', 'Mo', 'Hendrik', 'Tony']
+        for(let name of names){
+          if(name === knownName){
+            return console.log(`Dit is een bekende van ons: ${name}`)  
+          }
+        }
+        return console.log('Onbekend in ons systeem')
+      }
+      correctName('Hendrik');
+    }
+    
+    // Plaats hieronder alle antwoorden van de opdrachten.
+    /* 
+      Opdracht 7: door een functie aan te maken waar je 2 argumenten geeft. 
+      
+      De rest parameter syntax laat ons toe om een onbepaald aantal argumenten te vertegenwoordigen als een array.
+
+      Een impliciete parameter is het object waarop de methode wordt aangeroepen. 
+      Het wordt impliciet genoemd omdat we het niet declareren wanneer we de methode declareren.
+    */ 
+    </script>
+</body>
+</html>

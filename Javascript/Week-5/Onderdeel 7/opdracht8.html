@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="rock">Rock</button>
+    <button class="paper">Paper</button>
+    <button class="scissor">Scissor</button>
+    <span class="player"></span>
+    <span class="comp"></span>
+
+    <script>
+      const spanPlayer = document.querySelector(".player");
+      const spanComp = document.querySelector(".comp");
+      const buttons = document.querySelectorAll("button");
+
+      const computerIdkNaam = () => {
+        const choices = ["Rock", "Paper", "Scissor"];
+        compChoice = choices[Math.floor(Math.random() * 3)];
+        return compChoice;
+      };
+
+      const startGame = () => {
+        buttons.forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            spanPlayer.innerHTML = btn.innerText;
+            let pick = computerIdkNaam();
+            console.log(pick);
+            if (pick === spanPlayer.innerHTML) {
+              spanPlayer.innerHTML = `${spanPlayer.innerHTML}, You Won!`;
+            }
+          });
+        });
+      };
+      startGame();
+    </script>
+  </body>
+</html>
