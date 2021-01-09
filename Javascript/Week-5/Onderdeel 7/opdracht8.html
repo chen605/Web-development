@@ -5,18 +5,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      font-size: 130%;
+    }
+    body {
+      background-color: grey;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100vh;
+    }
+    .game {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      width: 50rem;
+    }
+    button,
+    .button {
+      padding: 1.5rem 2.5rem 1.5rem 2.5rem;
+      margin: 0.3rem;
+    }
+    .button {
+      margin-left: 10rem;
+    }
+    .score {
+      display: flex;
+      flex-direction: row;
+      font-size: 3rem;
+    }
+    .rounds,
+    .wins,
+    .losses {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 3rem;
+    }
+    .text {
+      padding-bottom: 3rem;
+      height: 6rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .result {
+      font-size: 3rem;
+      color: red;
+    }
+  </style>
+
   <body>
-    <button class="rock">Rock</button>
-    <button class="paper">Paper</button>
-    <button class="scissor">Scissor</button>
-    <span class="player"></span>
-    <span class="comp"></span>
+    <section class="score">
+      <div class="rounds">
+        <p>rounds</p>
+        <span class="roundCount">0</span>
+      </div>
+      <div class="wins">
+        <p>wins</p>
+        <span class="winCount">0</span>
+      </div>
+      <div class="losses">
+        <p>losses</p>
+        <span class="loseCount">0</span>
+      </div>
+    </section>
+
+    <section class="text">
+      <span class="comment"></span>
+      <p>Player:<span class="player"></span></p>
+      <p>Comp:<span class="comp"></span></p>
+      <span class="result"></span>
+    </section>
+
+    <section class="game">
+      <button>Rock</button>
+      <button>Paper</button>
+      <button>Scissor</button>
+
+      <input
+        class="button"
+        type="button"
+        value="reset"
+        onclick="location.reload()"
+      />
+    </section>
 
     <script>
       const spanPlayer = document.querySelector(".player");
       const spanComp = document.querySelector(".comp");
       const buttons = document.querySelectorAll("button");
+      let roundCount2 = 0;
+      let winCount2 = 0;
+      let loseCount2 = 0;
 
+      //randomizer for the computer.
       const computerIdkNaam = () => {
         const choices = ["Rock", "Paper", "Scissor"];
         compChoice = choices[Math.floor(Math.random() * 3)];
@@ -24,13 +117,61 @@
       };
 
       const startGame = () => {
+        let roundCount = parseInt(
+          document.querySelector(".roundCount").innerHTML
+        );
+
         buttons.forEach((btn) => {
-          btn.addEventListener("click", (e) => {
+          btn.addEventListener("click", () => {
             spanPlayer.innerHTML = btn.innerText;
             let pick = computerIdkNaam();
             console.log(pick);
+            document.querySelector(".comp").innerHTML = `${pick}`;
+            // Gelijkspel
             if (pick === spanPlayer.innerHTML) {
-              spanPlayer.innerHTML = `${spanPlayer.innerHTML}, You Won!`;
+              spanPlayer.innerHTML = `${spanPlayer.innerHTML}`;
+              document.querySelector(".comment").innerHTML = `You Tied`;
+              roundCount2++;
+              document.querySelector(
+                ".roundCount"
+              ).innerHTML = `${roundCount2}`;
+            } else if (
+              (spanPlayer.innerHTML === "Scissor" && pick === "Paper") ||
+              (spanPlayer.innerHTML === "Rock" && pick === "Scissor") ||
+              (spanPlayer.innerHTML === "Paper" && pick === "Rock")
+            ) {
+              spanPlayer.innerHTML = `${spanPlayer.innerHTML}`;
+              document.querySelector(".comment").innerHTML = `You Won!`;
+              roundCount2++;
+              document.querySelector(
+                ".roundCount"
+              ).innerHTML = `${roundCount2}`;
+              winCount2++;
+              document.querySelector(".winCount").innerHTML = `${winCount2}`;
+            } else {
+              spanPlayer.innerHTML = `${spanPlayer.innerHTML}`;
+              document.querySelector(".comment").innerHTML = `LOOOOSERRRR`;
+              roundCount2++;
+              document.querySelector(
+                ".roundCount"
+              ).innerHTML = `${roundCount2}`;
+              loseCount2++;
+              document.querySelector(".loseCount").innerHTML = `${loseCount2}`;
+            }
+
+            if (winCount2 === 2) {
+              document.querySelector(".result").innerHTML =
+                "YEAAHAHHHAHAHAHAHHAHAHHHHHHH";
+              document.querySelector(".result").style.color = "lightgreen";
+              for (let button of buttons) {
+                button.disabled = true;
+              }
+            }
+            if (loseCount2 === 2) {
+              document.querySelector(".result").innerHTML = "NEEEWWWBBBBBBBB";
+              for (let button of buttons) {
+                button.disabled = true;
+              }
             }
           });
         });
