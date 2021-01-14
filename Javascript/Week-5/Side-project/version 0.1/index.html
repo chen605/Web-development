@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>BeastRows Alpha 0.2</title>
+  </head>
+  <body>
+    <section class="title">
+      <h1>BeastRows</h1>
+    </section>
+    <main class="content">
+      <section class="dungeon">
+        <img
+          src="https://i.postimg.cc/SKz7T7Gw/dungeon-Background2.png"
+          alt=""
+        />
+        <img
+          class="player"
+          src="https://i.postimg.cc/PxQD96vF/barbarian-1-run.gif"
+          alt=""
+        />
+        <img
+          class="monster"
+          onclick="clickDamage()"
+          src="https://i.postimg.cc/9MvwxWJH/ezgif-com-gif-maker-6.gif"
+          alt=""
+        />
+        <button class="start-button">START!</button>
+        <div class="round-count">
+          <p>Level: <span id="playerRound">0</span></p>
+        </div>
+        <div class="health-bar-all">
+          <div class="health-bar">
+            <div class="health-bar-glass">
+              <div class="health-bar-fluid anim-width"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="buttons">
+        <button class="levelUp">
+          <p>Level Up</p>
+          <span
+            ><img
+              class="coin"
+              src="https://i.postimg.cc/zD9N4J56/coin.gif"
+              alt=""
+          /></span>
+        </button>
+        <button class="shop">
+          <p>Shop</p>
+          <span
+            ><img
+              class="chest"
+              src="https://i.postimg.cc/BnT9kyC0/treasure-chest.gif"
+              alt=""
+          /></span>
+        </button>
+        <button class="powerUp" onclick="powerUp()">
+          <p>Power Up</p>
+          <span
+            ><img
+              class="coin"
+              src="https://i.postimg.cc/zD9N4J56/coin.gif"
+              alt=""
+          /></span>
+        </button>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

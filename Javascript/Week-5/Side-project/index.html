@@ -3,10 +3,369 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=MedievalSharp&family=Pirata+One&display=swap");
+    </style>
+
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        width: 100%;
+        height: 100%;
+        background: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: url("https://i.postimg.cc/y6SW-b123/BG-dg7.jpg") no-repeat
+          center;
+        background-size: cover;
+      }
+      .content {
+        width: 80%;
+      }
+      .dungeon {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+
+        /* height: 45vh;
+        background: url("./images/background/dungeonBackground2.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center; */
+      }
+      img {
+        width: 100%;
+      }
+      .title {
+        width: 80%;
+      }
+      h1 {
+        font-family: "Pirata One", cursive;
+        font-size: 17rem;
+        text-align: center;
+        letter-spacing: 0.5rem;
+        color: rgba(255, 222, 32, 0.836);
+        text-shadow: 1px 1px 1px #919191ec, 1px 2px 1px #919191,
+          1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191,
+          1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191,
+          1px 9px 1px #919191, 1px 10px 1px #919191,
+          1px 18px 6px rgba(16, 16, 16, 0.4),
+          1px 22px 10px rgba(16, 16, 16, 0.2),
+          1px 25px 35px rgba(16, 16, 16, 0.2),
+          1px 30px 60px rgba(16, 16, 16, 0.4);
+      }
+      .buttons {
+        width: 100%;
+        background-color: rgb(105, 106, 119);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      .levelUp,
+      .shop,
+      .powerUp {
+        font-family: "MedievalSharp";
+        font-size: 2.5rem;
+        background: url("https://image.shutterstock.com/image-illustration/dark-wood-backgroundcartoon-wooden-seamless-260nw-1490220233.jpg");
+        background-size: cover;
+        padding: 3rem;
+        color: white;
+        width: 20rem;
+        margin: 2rem 2.5rem;
+        border: none;
+        outline: none;
+      }
+      .player {
+        width: 25%;
+        position: absolute;
+        bottom: -10%;
+        left: -17%;
+
+        transition: all 3s linear;
+      }
+      .monster {
+        width: 25%;
+        position: absolute;
+        bottom: -11%;
+        right: -17%;
+
+        transition: all 3s linear;
+      }
+
+      /* .dungeon:active > .barb {
+        left: 34%;
+      }
+      .dungeon:active > .demon {
+        right: 34%;
+      } */
+      .start-button {
+        position: absolute;
+        top: 40%;
+        background-color: gold;
+        width: 25rem;
+        color: black;
+        font-size: 5rem;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+      }
+      .coin {
+        width: 30%;
+      }
+      .chest {
+        width: 30%;
+      }
+
+      .health-bar-all {
+        position: absolute;
+        right: 3%;
+      }
+      .health-bar {
+        position: relative;
+
+        display: inline-block;
+
+        margin: 6px 0;
+      }
+
+      .health-bar:before {
+        content: "";
+
+        z-index: -1;
+
+        position: absolute;
+        top: -6px;
+        width: 16px;
+        height: 28px;
+      }
+
+      .health-bar:after {
+        content: "";
+
+        z-index: -1;
+
+        position: absolute;
+        top: -6px;
+        right: 0;
+        width: 16px;
+        height: 28px;
+      }
+
+      .health-bar-glass {
+        display: inline-block;
+        width: 200px;
+        height: 16px;
+
+        z-index: 10;
+
+        border: 2px solid #000000;
+        box-shadow: inset 0 0 0 2px #dbd75d;
+      }
+
+      .health-bar-fluid {
+        width: 100%;
+        height: 100%;
+        background: #d34549;
+        box-shadow: inset 0 3px 0 -1px #d3aa9a, inset 0 -4px 0 -2px #4d494d,
+          inset 4px 0 0 -2px #4d494d, inset -4px 0 0 -2px #4d494d;
+      }
+    </style>
   </head>
   <body>
-    <h1>BeastRows</h1>
+    <section class="title">
+      <h1>BeastRows</h1>
+    </section>
+    <main class="content">
+      <section class="dungeon">
+        <img
+          src="https://i.postimg.cc/SKz7T7Gw/dungeon-Background2.png"
+          alt=""
+        />
+        <img
+          class="player"
+          src="https://i.postimg.cc/PxQD96vF/barbarian-1-run.gif"
+          alt=""
+        />
+        <img
+          class="monster"
+          onclick="clickDamage()"
+          src="monsters[index].monsterRun"
+          alt=""
+        />
+
+        <button class="start-button" onclick="startGame()">START!</button>
+
+        <div class="health-bar-all">
+          <div class="health-bar">
+            <div class="health-bar-glass">
+              <div class="health-bar-fluid anim-width"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="buttons">
+        <button class="levelUp">
+          <p>Level Up</p>
+          <span
+            ><img
+              class="coin"
+              src="https://i.postimg.cc/zD9N4J56/coin.gif"
+              alt=""
+          /></span>
+        </button>
+        <button class="shop">
+          <p>Shop</p>
+          <span
+            ><img
+              class="chest"
+              src="https://i.postimg.cc/BnT9kyC0/treasure-chest.gif"
+              alt=""
+          /></span>
+        </button>
+        <button class="powerUp">
+          <p>Power Up</p>
+          <span
+            ><img
+              class="coin"
+              src="https://i.postimg.cc/zD9N4J56/coin.gif"
+              alt=""
+          /></span>
+        </button>
+      </section>
+    </main>
+    <script>
+      const getSpawn = () => {
+        // Monster animations.
+        return [
+          {
+            name: "monster1",
+            monsterRun:
+              "https://i.postimg.cc/9MvwxWJH/ezgif-com-gif-maker-6.gif",
+            monsterHit:
+              "https://i.postimg.cc/9fg77P9M/ezgif-com-gif-maker-5.gif",
+            monsterDead:
+              "https://i.postimg.cc/zBLRSLwk/ezgif-com-gif-maker-4.gif",
+          },
+          {
+            name: "monster2",
+            monsterRun:
+              "https://i.postimg.cc/HLWB4th1/ezgif-com-gif-maker-9.gif",
+            monsterHit:
+              "https://i.postimg.cc/vZsPDy7B/ezgif-com-gif-maker-8.gif",
+            monsterDead:
+              "https://i.postimg.cc/K8D0MWQ5/ezgif-com-gif-maker-7.gif",
+          },
+          {
+            name: "monster3",
+            monsterRun:
+              "https://i.postimg.cc/Dfc0RdCM/ezgif-com-gif-maker-18.gif",
+            monsterHit:
+              "https://i.postimg.cc/wTTMzyZT/ezgif-com-gif-maker-17.gif",
+            monsterDead:
+              "https://i.postimg.cc/m2XDgZW3/ezgif-com-gif-maker-16.gif",
+          },
+        ];
+      };
+      const player = document.querySelector(".player");
+      const monster = document.querySelector(".monster");
+      const startButton = document.querySelector(".start-button");
+      const monsterHealth = document.querySelector(".health-bar-fluid");
+      let getLength = getSpawn();
+      var index = Math.floor(Math.random() * getLength.length);
+      let newMonsterHealth = 10;
+      monster.style.src = getLength[index].monsterRun;
+      const startGame = async () => {
+        const monsters = getSpawn();
+        startButton.style.display = "none";
+        player.style.left = "33%";
+        monster.style.right = "33%";
+
+        await setTimeout(function () {
+          player.src = "https://i.postimg.cc/YCGtNsHH/barbarian-1-attack.gif";
+          monster.src =
+            //
+            monsters[index].monsterHit;
+        }, 3000);
+        await setTimeout(function () {
+          setInterval(function () {
+            clickDamage();
+          }, 1000);
+        }, 3000);
+      };
+
+      const clickDamage = () => {
+        const newMonster = getSpawn();
+        newMonsterHealth -= 1;
+        monsterHealth.style.width = `${newMonsterHealth}%`;
+        if (newMonsterHealth <= 0) {
+          player.src = "https://i.postimg.cc/PxQD96vF/barbarian-1-run.gif";
+          monster.src =
+            // "https://i.postimg.cc/9QrydC0Q/ezgif-com-gif-maker-2.gif";
+            newMonster[index].monsterDead;
+
+          setTimeout(function () {
+            monster.style.display = "none";
+            monster.style.src = newMonster[index].monsterRun;
+          }, 1000);
+
+          player.style.left = "100%";
+          setTimeout(function () {
+            respawn();
+          }, 3000);
+        }
+      };
+
+      const respawn = async () => {
+        player.style.display = "none";
+        player.style.left = "-17%";
+        // monster.style.right = "-17%";
+        // monster.src = "https://i.postimg.cc/rsd8xsTC/ezgif-com-gif-maker.gif";
+        newMonsterHealth = 100;
+        spawnMonster();
+        await setTimeout(function () {
+          startReset();
+        }, 500);
+      };
+
+      const spawnMonster = () => {
+        const monsters = getSpawn();
+        monster.style.right = "-17%";
+        monster.style.src = monsters[index].monsterRun;
+      };
+
+      const startReset = async () => {
+        const monsters = getSpawn();
+        player.style.display = "block";
+        monster.style.display = "block";
+        await setTimeout(function () {
+          player.style.left = "33%";
+          monster.style.right = "33%";
+        }, 3001);
+        await setTimeout(function () {
+          player.src = "https://i.postimg.cc/YCGtNsHH/barbarian-1-attack.gif";
+          monster.src =
+            // "https://i.postimg.cc/FsqYQcFh/ezgif-com-gif-maker-3.gif";
+            monsters[index].monsterHit;
+        }, 6000);
+
+        // player.style.transition = "all 3s linear";
+        // monster.style.transition = "all 3s linear";
+        // startGame();
+      };
+    </script>
   </body>
 </html>
