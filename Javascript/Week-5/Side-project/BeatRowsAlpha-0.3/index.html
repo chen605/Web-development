@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>BeastRows Alpha 0.2</title>
+  </head>
+  <body class="allContent">
+    <header class="header">
+      <section class="header__title">
+        <h1 class="header__h1">BeastRows</h1>
+      </section>
+      <ul class="header__slideshow">
+        <li class="header__slideshow__li"><span class="header__slideshow__li__span"></span></li>
+        <li class="header__slideshow__li"><span class="header__slideshow__li__span"></span></li>
+        <li class="header__slideshow__li"><span class="header__slideshow__li__span"></span></li>
+        <li class="header__slideshow__li"><span class="header__slideshow__li__span"></span></li>
+        <li class="header__slideshow__li"><span class="header__slideshow__li__span"></span></li>
+        <li class="header__slideshow__li"><span class="header__slideshow__li__span"></span></li>
+        <li class="header__slideshow__li"><span class="header__slideshow__li__span"></span></li>
+      </ul>
+    </header>
+
+    <main class="mainContent">
+      <section class="mainContent__dungeon">
+        <img
+          class="mainContent__dungeon__img-background img"
+          src="https://i.postimg.cc/SKz7T7Gw/dungeon-Background2.png"
+          alt=""
+        />
+        <img
+          class="mainContent__dungeon__img-player player"
+          src="https://i.postimg.cc/PxQD96vF/barbarian-1-run.gif img"
+          alt=""
+        />
+        <img
+          class="mainContent__dungeon__img-monster monster"
+          onclick="clickDamage()"
+          src="https://i.postimg.cc/9MvwxWJH/ezgif-com-gif-maker-6.gif img"
+          alt=""
+        />
+        <button class="mainContent__dungeon__start-button start-button">START!</button>
+        <div class="mainContent__dungeon__round-count">
+          <p>Level: <span id="playerRound">0</span></p>
+        </div>
+        <div class="mainContent__dungeon__health-bar-all">
+          <div class="mainContent__dungeon__health-bar-all__health-bar">
+            <div class="mainContent__dungeon__health-bar-all__health-bar__health-bar-glass">
+              <div class="mainContent__dungeon__health-bar-all__health-bar__health-bar-glass__health-bar-fluid health-bar-fluid"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mainContent__playerInput">
+        <button class="mainContent__playerInput__levelUp">
+          <p>Level Up</p>
+          <span
+            ><img
+              class="mainContent__playerInput__coin"
+              src="https://i.postimg.cc/zD9N4J56/coin.gif"
+              alt=""
+          /></span>
+        </button>
+        <button class="mainContent__playerInput__shop">
+          <p>Shop</p>
+          <span
+            ><img
+              class="mainContent__playerInput__chest"
+              src="https://i.postimg.cc/BnT9kyC0/treasure-chest.gif"
+              alt=""
+          /></span>
+        </button>
+        <button class="mainContent__playerInput__powerUp" onclick="powerUp()">
+          <p>Power Up</p>
+          <span
+            ><img
+              class="mainContent__playerInput__coin"
+              src="https://i.postimg.cc/zD9N4J56/coin.gif"
+              alt=""
+          /></span>
+        </button>
+      </section>
+      <section class="mainContent__secret">
+        <div class="mainContent__secret__maxHp"></div>
+      </section>
+
+      </section>
+    </main>
+
+    <footer></footer>
+    <script src="./app.js"></script>
+  </body>
+</html>

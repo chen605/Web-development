@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=MedievalSharp&family=Pirata+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+.allContent {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.img {
+  width: 100%;
+}
+
+.header {
+  &__title {
+    width: 80%;
+  }
+  &__h1 {
+    font-family: "Pirata One", cursive;
+    font-size: 17rem;
+    text-align: center;
+    letter-spacing: 0.5rem;
+    color: rgba(255, 222, 32, 0.836);
+    text-shadow: 1px 1px 1px #919191ec, 1px 2px 1px #919191, 1px 3px 1px #919191,
+      1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191,
+      1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191,
+      1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2),
+      1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
+  }
+  &__slideshow {
+    list-style-type: none;
+    top: -1px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    z-index: -3;
+    &:after {
+      top: -1px;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      left: 0px;
+      z-index: -3;
+    }
+    &__li {
+      &:nth-child(1) span {
+        background-image: url("https://i.postimg.cc/VN6kBmj6/BG-dg2.jpg");
+      }
+      &:nth-child(2) span {
+        background-image: url("https://i.postimg.cc/RhcSVFzP/BG-dg3-jpg.png");
+        animation-delay: 20s;
+      }
+      &:nth-child(3) span {
+        background-image: url("https://i.postimg.cc/MGFK9NDY/BG-dg4.jpg");
+        animation-delay: 40s;
+      }
+      &:nth-child(4) span {
+        background-image: url("https://i.postimg.cc/mD1ZJjpW/BG-dg6.jpg");
+        animation-delay: 60s;
+      }
+      &:nth-child(5) span {
+        background-image: url("https://i.postimg.cc/YqH2D11T/BG-dg5.png");
+        animation-delay: 80s;
+      }
+      &:nth-child(6) span {
+        background-image: url("https://i.postimg.cc/y6SW-b123/BG-dg7.jpg");
+        animation-delay: 100s;
+      }
+      &__span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        color: transparent;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        opacity: 0;
+        z-index: 0;
+        animation: imageAnimation 120s infinite 0s;
+      }
+    }
+  }
+}
+
+.mainContent {
+  width: 80%;
+  &__dungeon {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    &__img-player {
+      width: 25%;
+      position: absolute;
+      bottom: -10%;
+      left: -17%;
+      transition: all 3s linear;
+    }
+    &__img-monster {
+      width: 25%;
+      position: absolute;
+      bottom: -11%;
+      right: -17%;
+      transition: all 3s linear;
+    }
+
+    &__start-button {
+      position: absolute;
+      top: 40%;
+      background-color: gold;
+      width: 25rem;
+      color: black;
+      font-size: 5rem;
+      border: none;
+      border-radius: 10px;
+      outline: none;
+    }
+
+    &__round-count {
+      position: absolute;
+      left: 10%;
+      font-size: 2rem;
+      color: white;
+    }
+
+    &__health-bar-all {
+      position: absolute;
+      right: 3%;
+      &__health-bar {
+        position: relative;
+        display: inline-block;
+        margin: 6px 0;
+        :before {
+          content: "";
+          z-index: -1;
+          position: absolute;
+          top: -6px;
+          width: 16px;
+          height: 28px;
+        }
+        :after {
+          content: "";
+          z-index: -1;
+          position: absolute;
+          top: -6px;
+          right: 0;
+          width: 16px;
+          height: 28px;
+        }
+        &__health-bar-glass {
+          display: inline-block;
+          width: 200px;
+          height: 16px;
+
+          z-index: 10;
+
+          border: 2px solid #000000;
+          box-shadow: inset 0 0 0 2px #dbd75d;
+          &__health-bar-fluid {
+            width: 100%;
+            height: 100%;
+            background: #d34549;
+            box-shadow: inset 0 3px 0 -1px #d3aa9a, inset 0 -4px 0 -2px #4d494d,
+              inset 4px 0 0 -2px #4d494d, inset -4px 0 0 -2px #4d494d;
+          }
+        }
+      }
+    }
+  }
+  &__playerInput {
+    width: 100%;
+    background-color: rgb(105, 106, 119);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    &__levelUp,
+    &__shop,
+    &__powerUp {
+      font-family: "MedievalSharp";
+      font-size: 2.5rem;
+      background: url("https://image.shutterstock.com/image-illustration/dark-wood-backgroundcartoon-wooden-seamless-260nw-1490220233.jpg");
+      background-size: cover;
+      padding: 3rem;
+      color: white;
+      width: 20rem;
+      margin: 2rem 2.5rem;
+      border: none;
+      outline: none;
+    }
+    &__coin, &__chest {
+      width: 30%;
+    }
+  }
+}
+/* BACKGROUND IMAGES */
+
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  3% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  17% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes titleAnimation {
+  0% {
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+  }
+  19% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
