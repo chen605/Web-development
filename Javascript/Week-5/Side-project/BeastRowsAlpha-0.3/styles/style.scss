@@ -32,10 +32,11 @@ html {
     letter-spacing: 0.5rem;
     color: rgba(255, 222, 32, 0.836);
     text-shadow: 1px 1px 1px #919191ec, 1px 2px 1px #919191, 1px 3px 1px #919191,
-      1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191,
-      1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191,
-      1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2),
-      1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
+      1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191,
+      1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191,
+      1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4),
+      1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2),
+      1px 30px 60px rgba(16, 16, 16, 0.4);
   }
   &__slideshow {
     list-style-type: none;
@@ -138,6 +139,18 @@ html {
       font-size: 2rem;
       color: white;
     }
+    &__money-count {
+      color: gold;
+      position: absolute;
+      left: 20%;
+      font-size: 2rem;
+    }
+    &__diamond-count {
+      color: darkturquoise;
+      position: absolute;
+      left: 30%;
+      font-size: 2rem;
+    }
 
     &__health-bar-all {
       position: absolute;
@@ -203,7 +216,8 @@ html {
       border: none;
       outline: none;
     }
-    &__coin, &__chest {
+    &__coin,
+    &__chest {
       width: 30%;
     }
   }

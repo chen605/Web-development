@@ -33,6 +33,7 @@ const getMonster = () => {
     },
   ];
 };
+
 const powerUp = () => {
   dps++;
   return dps;
