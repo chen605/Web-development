@@ -52,6 +52,7 @@
           class="mainContent__dungeon__img-monster monster"
           src="https://i.postimg.cc/9MvwxWJH/ezgif-com-gif-maker-6.gif img"
           alt=""
+          onclick="clickDamage()"
         />
         <button class="mainContent__dungeon__start-button start-button">
           START!
@@ -145,13 +146,13 @@
               class="mainContent__playerInput__health-bar-all__health-bar__health-bar-glass"
             >
               <div
-                class="mainContent__playerInput__health-bar-all__health-bar__health-bar-glass__health-bar-fluid health-bar-fluid"
+                class="mainContent__playerInput__health-bar-all__health-bar__health-bar-glass__health-bar-fluid health-bar-fluid-mobile"
               ></div>
             </div>
           </div>
         </div>
         <div class="mainContent__playerInput__buttons">
-          <button class="mainContent__playerInput__levelUp">
+          <button class="mainContent__playerInput__levelUp" onclick="levelUp()">
             <p>Level Up</p>
             <span class="mainContent__playerInput__price">
               <img
@@ -196,6 +197,7 @@
 
     <footer>
       <section class="hidden">
+        <span id="hidden-max-hp"></span>
         <span id="hidden-hp"></span>
       </section>
       <button onclick="getRich()">test button</button>
