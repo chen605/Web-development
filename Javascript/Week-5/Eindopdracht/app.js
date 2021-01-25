@@ -1,9 +1,4 @@
 const keys = document.querySelector('.calculator-keys');
-// let screen = document.querySelector('.screen');
-// let numOne = document.getElementById('num1');
-// let numTwo = document.getElementById('num2');
-// let sum = document.getElementById('sum');
-
 
 const calculator = {
   displayValue: '0',
@@ -13,17 +8,52 @@ const calculator = {
 };
 
 function inputDigit(digit) {
-  const { displayValue } = calculator;
-  // Overwrite `displayValue` if the current value is '0' otherwise append to it
-  calculator.displayValue = displayValue === '0' ? digit : displayValue + digit;
-}
+  const { displayValue, waitingForSecondOperand } = calculator;
+
+  if (waitingForSecondOperand === true) {
+    calculator.displayValue = digit;
+    calculator.waitingForSecondOperand = false;
+  } else {
+    calculator.displayValue = displayValue === '0' ? digit : displayValue + digit;
+  }
+
+  console.log(calculator);
+} 
 
 function inputDecimal(dot) {
-  // If the `displayValue` property does not contain a decimal point
+  if (calculator.waitingForSecondOperand === true) {
+  	calculator.displayValue = '0.'
+    calculator.waitingForSecondOperand = false;
+    return
+  }
+
   if (!calculator.displayValue.includes(dot)) {
-    // Append the decimal point
     calculator.displayValue += dot;
   }
+}
+
+function handleOperator(nextOperator) {
+  const { firstOperand, displayValue, operator } = calculator
+  toggle = true;
+  calculator.displayValue = '';
+  const inputValue = parseFloat(displayValue);
+  if (operator && calculator.waitingForSecondOperand)  {
+    calculator.operator = nextOperator;
+    console.log(calculator)
+    return;
+  }
+
+  if (firstOperand == null && !isNaN(inputValue)) {
+    calculator.firstOperand = inputValue;
+  } else if (operator) {
+    const result = calculate(firstOperand, inputValue, operator);
+    calculator.displayValue = `${parseFloat(result.toFixed(7))}`;;
+    calculator.firstOperand = result;
+  }
+
+  calculator.waitingForSecondOperand = true;
+  calculator.operator = nextOperator;
+  console.log(calculator);
 }
 
 function updateDisplay() {
@@ -35,34 +65,129 @@ function updateDisplay() {
 
 updateDisplay();
 
+function calculate(firstOperand, secondOperand, operator) {
+  if (operator === '+') {
+    return firstOperand + secondOperand;
+  } else if (operator === '-') {
+    return firstOperand - secondOperand;
+  } else if (operator === '*') {
+    return firstOperand * secondOperand;
+  } else if (operator === '/') {
+    return firstOperand / secondOperand;
+  } else if (operator === '%') {
+    return firstOperand % secondOperand;
+  }
 
-keys.addEventListener('click', (event) => {
-  // Access the clicked element
+  return secondOperand;
+}
+
+function resetCalculator() {
+  calculator.displayValue = '0';
+  calculator.firstOperand = null;
+  calculator.waitingForSecondOperand = false;
+  calculator.operator = null;
+  console.log(calculator);
+}
+
+let toggle = true;
+function plusMinus(sym){  
+  if (calculator.waitingForSecondOperand === true) {
+  	calculator.displayValue = '';
+    calculator.waitingForSecondOperand = false;
+    return;
+  }
+  if (!calculator.displayValue.includes(sym)) {
+    if(calculator.displayValue == 0){
+      calculator.displayValue = '' ;
+    }
+    calculator.displayValue = '-' + calculator.displayValue;
+    toggle = false;   
+  }
+}
+
+function positive(){
+ toggle = true; 
+ if(calculator.displayValue.includes('-')){
+   calculator.displayValue = calculator.displayValue.replace('-', '');
+ }
+}
+
+keys.addEventListener('click', event => {
   const { target } = event;
-
-  // Check if the clicked element is a button.
-  // If not, exit from the function
+  const { value } = target;
   if (!target.matches('button')) {
     return;
   }
+  let buttons = document.querySelectorAll('.orange');
+  let modButton = document.querySelector('.gray')
+  switch (value) {
+    case '+':
+      buttons.forEach(el => el.style.backgroundColor = "orange");
+      modButton.style.backgroundColor = 'rgb(206, 197, 197)';
+      event.target.style.backgroundColor = "green";
+      toggle = true;
+      handleOperator(value);
+      break;
 
-  if (target.classList.contains('operator')) {
-    console.log('operator', target.value);
-    return;
+    case '-':
+      modButton.style.backgroundColor = 'rgb(206, 197, 197)';
+      buttons.forEach(el => el.style.backgroundColor = "orange");
+      event.target.style.backgroundColor = "green";
+      toggle = true;
+      handleOperator(value);
+      break;
+
+    case '*':
+      modButton.style.backgroundColor = 'rgb(206, 197, 197)';
+      buttons.forEach(el => el.style.backgroundColor = "orange");
+      event.target.style.backgroundColor = "green";
+      toggle = true;
+      handleOperator(value);
+      break;
+
+    case '/':
+      modButton.style.backgroundColor = 'rgb(206, 197, 197)';
+      modButton.style.backgroundColor = 'rgb(206, 197, 197)';
+      buttons.forEach(el => el.style.backgroundColor = "orange");
+      event.target.style.backgroundColor = "green";
+      toggle = true;
+      handleOperator(value);
+      break;
+
+    case '%':
+      buttons.forEach(el => el.style.backgroundColor = "orange");
+      event.target.style.backgroundColor = "green";
+      toggle = true;
+      handleOperator(value);
+      break;
+
+    case '=':
+      modButton.style.backgroundColor = 'rgb(206, 197, 197)';
+      buttons.forEach(el => el.style.backgroundColor = "orange")
+      toggle = true;
+      handleOperator(value);
+      break;
+    
+    case '.':
+      inputDecimal(value);
+      break;
+    case 'all-clear':
+      modButton.style.backgroundColor = 'rgb(206, 197, 197)';
+      buttons.forEach(el => el.style.backgroundColor = "orange")
+      toggle = true;
+      resetCalculator();
+      break;
+    case '+/-':
+      toggle ? plusMinus()  : positive();
+      
+      break;
+    default:
+      // check if the key is an integer
+      if (Number.isInteger(parseFloat(value))) {
+        inputDigit(value);
+      }
   }
 
-  if (target.classList.contains('decimal')) {
-    inputDecimal(target.value);
-  updateDisplay();  
-    return;
-  }
-
-  if (target.classList.contains('all-clear')) {
-    console.log('clear', target.value);
-    return;
-  }
-
-  inputDigit(target.value);
   updateDisplay();
 });
 
